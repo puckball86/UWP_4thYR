@@ -1,0 +1,33 @@
+﻿<Page
+    x:Class="MyTimer.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyTimer"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"  
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/background2.jpg" Stretch="UniformToFill" />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Ellipse Stroke="Red" StrokeThickness="2" Width="202" Height="202" Margin="0 0 5 5"/>
+            <local:CircleProgress x:ConnectionId='2' x:Name="ProgressControl" Size="200" Color="MediumSpringGreen" LineWidth="6" Margin="0,0,0,0" VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <TextBlock x:ConnectionId='3' x:Name="Hour" Text="00:00:00:00"  Foreground="White" HorizontalAlignment="Center"  Margin="0 20 0 0" />
+            <Button x:ConnectionId='4' x:Name="Start" Content="Start"                     Margin="0 0 0 0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" />
+            <Button x:ConnectionId='5' x:Name="Lap" Content="Lap"                   Margin="0 80 0 0" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" />
+
+        </Grid>
+        <Grid Grid.Row="1">
+            <TextBox x:ConnectionId='1' x:Name="txtLap" Background="White"   TextWrapping="Wrap" AcceptsReturn="True" />
+        </Grid>
+    </Grid>
+</Page>
+
